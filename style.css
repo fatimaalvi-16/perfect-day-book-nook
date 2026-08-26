@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fceef5;
+    color: #5d5366;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* HEADER */
+
+header {
+    padding: 30px;
+    background: #f7dce9;
+}
+
+header h1 {
+    font-size: 42px;
+    color: #765b78;
+}
+
+header p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: Georgia, serif;
+}
+
+#themeButton {
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: #d9c7ed;
+    color: #5d5366;
+}
+
+/* ROOM */
+
+.room {
+    min-height: 600px;
+    padding: 50px;
+    position: relative;
+    background: #fff5ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* WINDOW */
+
+.window {
+    width: 260px;
+    height: 300px;
+    background: #cce8f4;
+    border: 15px solid #e5c8b9;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.sun {
+    font-size: 55px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 35px;
+}
+
+.cloud1 {
+    top: 80px;
+    left: 20px;
+}
+
+.cloud2 {
+    top: 140px;
+    right: 25px;
+}
+
+.window p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 15px;
+}
+
+/* BOOKSHELF */
+
+.bookshelf {
+    width: 320px;
+    padding: 25px;
+    background: #d8b59c;
+    border-radius: 12px;
+    box-shadow: 5px 8px 15px rgba(0,0,0,0.1);
+}
+
+.bookshelf h2 {
+    margin-bottom: 15px;
+    color: #654d4d;
+}
+
+.shelf {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 7px;
+    padding: 12px;
+    margin: 10px 0;
+    border-bottom: 8px solid #a98268;
+}
+
+.book {
+    padding: 20px 8px;
+    background: #eabed0;
+    border-radius: 5px 5px 0 0;
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+}
+
+/* READING AREA */
+
+.reading-area {
+    width: 220px;
+    position: relative;
+}
+
+.lamp {
+    font-size: 65px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.lamp:hover {
+    transform: scale(1.1);
+}
+
+.chair {
+    font-size: 130px;
+}
+
+.table {
+    background: #d6b39c;
+    height: 50px;
+    width: 180px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.mug {
+    font-size: 45px;
+    position: absolute;
+    left: 35px;
+    bottom: 25px;
+    cursor: pointer;
+}
+
+.plant {
+    font-size: 45px;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+}
+
+/* PERFECT DAY */
+
+.perfect-day {
+    padding: 60px 20px;
+    background: #eadff4;
+}
+
+.perfect-day h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.choices {
+    margin: 25px;
+}
+
+.choices button {
+    padding: 14px 20px;
+    margin: 8px;
+    border-radius: 25px;
+    background: #f5cddc;
+    color: #5d5366;
+    transition: 0.3s;
+}
+
+.choices button:hover {
+    transform: scale(1.08);
+    background: #e5c5eb;
+}
+
+#result {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff8f4;
+    font-size: 18px;
+}
+
+/* POPUP */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(80, 70, 90, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff5ed;
+    width: 350px;
+    padding: 35px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    color: #765b78;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    background: #f7dce9;
+}
+
+/* NIGHT MODE */
+
+body.night {
+    background: #28243a;
+    color: #eee1f2;
+}
+
+body.night header,
+body.night footer {
+    background: #3b3450;
+}
+
+body.night .room {
+    background: #353047;
+}
+
+body.night .window {
+    background: #55506e;
+}
+
+body.night .sun {
+    font-size: 0;
+}
+
+body.night .sun::after {
+    content: "🌙";
+    font-size: 50px;
+}
+
+body.night .perfect-day {
+    background: #443d59;
+}
+
+body.night #result,
+body.night .popup-content {
+    background: #514966;
+    color: #f5eafa;
+}
