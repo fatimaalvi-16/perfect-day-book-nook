@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Perfect Day - Book Nook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 A Perfect Day</h1>
+        <p>Welcome to your little book nook ♡</p>
+        <button id="themeButton">🌙 Night Mode</button>
+    </header>
+
+    <main class="room">
+
+        <!-- Window -->
+        <div class="window" id="window">
+            <div class="sun">☀️</div>
+            <div class="cloud cloud1">☁️</div>
+            <div class="cloud cloud2">☁️</div>
+            <p id="timeText">A peaceful morning...</p>
+        </div>
+
+        <!-- Bookshelf -->
+        <div class="bookshelf">
+            <h2>📚 My Books</h2>
+
+            <div class="shelf">
+                <button class="book" onclick="openBook('Fantasy')">
+                    ✨ Fantasy
+                </button>
+
+                <button class="book" onclick="openBook('Mystery')">
+                    🔍 Mystery
+                </button>
+
+                <button class="book" onclick="openBook('Adventure')">
+                    🗺️ Adventure
+                </button>
+
+                <button class="book" onclick="openBook('Romance')">
+                    💗 Romance
+                </button>
+            </div>
+
+            <div class="shelf">
+                <button class="book" onclick="openBook('Classics')">
+                    🌷 Classics
+                </button>
+
+                <button class="book" onclick="openBook('Thriller')">
+                    🕯️ Thriller
+                </button>
+
+                <button class="book" onclick="openBook('Poetry')">
+                    🦋 Poetry
+                </button>
+            </div>
+        </div>
+
+        <!-- Reading Area -->
+        <div class="reading-area">
+
+            <div class="lamp" id="lamp" onclick="toggleLamp()">
+                💡
+            </div>
+
+            <div class="chair">
+                🪑
+            </div>
+
+            <div class="table">
+
+                <div class="mug" onclick="showDrink()">
+                    ☕
+                </div>
+
+                <div class="plant">
+                    🪴
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Perfect Day Section -->
+
+    <section class="perfect-day">
+
+        <h2>✨ Create Your Perfect Reading Day ✨</h2>
+
+        <p>Choose your perfect reading mood:</p>
+
+        <div class="choices">
+
+            <button onclick="chooseMood('cozy')">
+                ☕ Cozy
+            </button>
+
+            <button onclick="chooseMood('adventure')">
+                🗺️ Adventurous
+            </button>
+
+            <button onclick="chooseMood('peaceful')">
+                🌸 Peaceful
+            </button>
+
+            <button onclick="chooseMood('magical')">
+                🪄 Magical
+            </button>
+
+        </div>
+
+        <div id="result">
+            Your perfect day is waiting... 💗
+        </div>
+
+    </section>
+
+
+    <!-- Pop-up -->
+
+    <div id="bookPopup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closeBook()">×</span>
+
+            <h2 id="bookTitle"></h2>
+
+            <p id="bookDescription"></p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>Made with ☕ + 📚 + a little bit of magic ✨</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
